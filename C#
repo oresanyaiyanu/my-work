@@ -1,0 +1,105 @@
+1. Write a C# program that prompt the user to input three numbers .The program should then output the numbers in ascending order.
+Ans:
+using System;
+class Program {
+static void Main(string[] args) {
+Console.WriteLine("Enter three numbers:");
+Console.Write("Enter the first number: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter the second number: ");
+int num2 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter the third number: ");
+int num3 = convert To int(console.Readline());
+if (num1 > num2) {
+temp = num1; num1 = num2; num2 = temp;
+}
+if (num2 > num3) {
+temp = num2; num2 = num3; num3 = temp;
+}
+if (num1 > num2) {
+temp = num1; num1 = num2; num2 = temp;
+}
+Console.WriteLine("Numbers in ascending order: {0} {1} {2}", num1, num2, num3); }
+}
+2. Write a PHP Function ,smallestindex ,that takes as parameters an int array and its size,and returns the index of the smallest element in the array .Also,write a program to test your function .
+
+Ans:
+>?php
+function smallestIndex($arr, $size) {
+if (empty($arr)) {
+return -1; // Return -1 if the array is empty
+}
+$smallest = $arr[0]; $index = 0;
+for($i=1;$i<$size;$i++){ if ($arr[$i] < $smallest) { $smallest = $arr[$i];
+$index = $i; }
+return $index; }
+$array = [5, 3, 9, 1, 7];
+$size = count($array);
+$smallestIndex = smallestIndex($array, $size); ?>
+3. Write a C# program that prompts the user to input a string and outputs the string in uppercase(Use a character array to store the string)
+Ans:
+using System;
+class Program {
+static void Main(string[] args) {
+Console.WriteLine("Enter a string:"); string inputString = Console.ReadLine();
+char[] charArray = inputString.ToCharArray(); for (int i = 0; i < charArray.Length; i++)
+{
+charArray[i] = char.ToUpper(charArray[i]); }
+string upperCaseString = new string(charArray); Console.WriteLine("Uppercase string: " + upperCaseString);
+
+}
+4. Write a C# program to compute the addition of of N by M matrices.Allow the user to determine the size of the row and column
+Ans:
+using System;
+class Program {
+static void Main(string[] args) {
+Console.WriteLine("Enter the number of rows for the matrices:"); int rows =Int(Console.ReadLine());
+Console.WriteLine("Enter the number of columns for the matrices:"); int columns = (Console.ReadLine());
+int[,] matrix1 = new int[rows, columns]; int[,] matrix2 = new int[rows, columns];
+Console.WriteLine("Enter elements for the first matrix:"); InputMatrixElements(matrix1:”)
+Console.WriteLine("Enter elements for the second matrix:"); InputMatrixElements(matrix2);
+int[,] resultMatrix = AddMatrices(matrix1, matrix2);
+Console.WriteLine("Result of matrix addition:"); }
+static void InputMatrixElements(int[,] matrix) {
+int rows = matrix.GetLength(0);
+int columns = matrix.GetLength(1);
+for(inti=0;i<rows;i++) {
+for (int j = 0; j < columns; j++) {
+Console.Write($"Enter element at
+5. Write a C# program that declares an array alpha of 50 components of the type float .Initialize
+
+the array so that the first 25 components are equal to the square of the index variable and the last 25 components are equal to three times the index variable.Output the array so that 10 elements per line are printed.
+Ans:
+using System;
+class Program {
+static void Main(string[] args) {
+float[] alpha = new float[50];
+for(inti=0;i<50;i++) {
+if(i<25) {
+alpha[i] = i * i; }
+else {
+alpha[i] = 3 * i; }
+}
+Console.WriteLine("Array elements:"); for(inti=0;i<50;i++)
+{
+Console.Write(alpha[i] + "\t"); if((i+1)%10==0)
+{
+Console.WriteLine(); }
+} }
+}
+6. Write a C# program that prompts the user to input a number .The program should then output the number and a message saying wether the number is positive ,negative ,or zero.
+Ans:
+using System;
+class Program
+
+{
+static void Main(string[] args) {
+Console.WriteLine("Enter a number:");
+double number = Double(Console.ReadLine()); Console.WriteLine("You entered: " + number);
+if (number > 0) {
+Console.WriteLine("The number is positive."); }
+else if (number < 0) {
+Console.WriteLine("The number is negative."); }
+else {
+Console.WriteLine("The number is zero."); }
+} }
